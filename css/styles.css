@@ -110,9 +110,6 @@ body.home {
 /* second screen */
 .game .game-container section.game-player-turn {
     margin-bottom: 40px;
-}
-
-.game .game-container section.game-player-turn p {
     font-size: 20px;
 }
 
@@ -127,6 +124,9 @@ body.home {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: ComfortaaLight;
+    font-size: 64px;
+    color: var(--green);
 }
 
 div:nth-child(1), div:nth-child(4), div:nth-child(7) {
@@ -139,11 +139,6 @@ div:nth-child(3), div:nth-child(6), div:nth-child(9) {
 
 div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-child(5), div:nth-child(6) {
     border-bottom: solid 1px var(--green);
-}
-
-.game .game-container section.game-board div p {
-    font-size: 64px;
-    color: var(--green);
 }
 
 /*third screen*/
@@ -176,9 +171,6 @@ div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-
     .game .game-container section.game-board div { 
         width: 150px;
         height: 150px;
-    }
-     
-    .game .game-container section.game-board div p {
         font-size: 84px;
     }
 

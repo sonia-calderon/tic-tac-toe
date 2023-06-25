@@ -5,31 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe Game</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="game">
+<body class="game" id="game">
     <header>
         <h1>TIC TAC TOE</h1>
     </header>
 
     <main class="game-container">
         <section class="game-player-turn">
-            <p>X's turn!</p>
+            <p></p>
         </section>
 
         <section class="game-board">
-            <div><p>O</p></div>
-            <div><p>X</p></div>
-            <div><p>X</p></div>
-            <div><p>O</p></div>
-            <div><p>X</p></div>
-            <div><p>O</p></div>
-            <div><p>X</p></div>
-            <div><p>O</p></div>
-            <div><p>X</p></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+            <div id="9"></div>
         </section>
         <section>
-            <a href="./game-over.html" class="btn">RESTART!</a>
+            <a href="#" class="btn" id="restart">RESTART!</a>
         </section>
         
     </main>
