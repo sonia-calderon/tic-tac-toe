@@ -11,6 +11,13 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: PressStart2P;
+    src: url(../assets/fonts/pressstart2p-regular.woff);
+    font-weight: 400;
+
+}
+
 /* ------------------------- COLORS ------------------------------------------- */
 :root {
     --darkBlue: #223350;
@@ -34,7 +41,8 @@ body {
 }
 
 h1 {
-    font-family: ComfortaaBold;
+    font-family: PressStart2P;
+    text-align: center;
     font-size: 40px;
     color: var(--green);
 }
@@ -142,12 +150,13 @@ div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-
 }
 
 /*third screen*/
-.game .game-container section.game-over-result p:first-child {
+.game .game-container section.game-result p:first-child {
     font-size: 36px;
     margin: 0 14px 30px  14px;
 }
 
-.game .game-container section.game-over-result p:last-child {
+.game .game-container section.game-result p:last-child {
+    font-family: PressStart2P;
     font-size: 128px;
     color: var(--green);
 }
@@ -175,11 +184,11 @@ div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-
     }
 
     /*third screen*/
-    .game .game-container section.game-over-result p:first-child {
+    .game .game-container section.game-result p:first-child {
         font-size: 56px;
     }
     
-    .game .game-container section.game-over-result p:last-child {
+    .game .game-container section.game-result p:last-child {
         font-size: 148px;
     }
 }
