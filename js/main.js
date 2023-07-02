@@ -69,11 +69,11 @@ function cellClicked(e){
             }else if(currentPlayer === 'O'){
                 currentPlayer = 'X'
             }
-            window.location.href = '../game-over.html?winner=' + currentPlayer;
+            window.location.href = './game-over.html?winner=' + currentPlayer;
         }
         
         if(gameResult() === true){
-            window.location.href = '../game-over.html?winner=gameover';
+            window.location.href = './game-over.html?winner=gameover';
         }  
     }
 } //end of CellClicked function
