@@ -1,21 +1,8 @@
 /* ------------------------- FONTS ------------------------------------------- */
 @font-face {
-    font-family: ComfortaaLight;
-    src: url(../assets/fonts/comfortaa-light.woff);
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: ComfortaaBold;
-    src: url(../assets/fonts/comfortaa-bold.woff);
-    font-weight: 700;
-}
-
-@font-face {
     font-family: PressStart2P;
     src: url(../assets/fonts/pressstart2p-regular.woff);
     font-weight: 400;
-
 }
 
 /* ------------------------- COLORS ------------------------------------------- */
@@ -42,9 +29,10 @@ body {
 
 h1 {
     font-family: PressStart2P;
-    text-align: center;
     font-size: 40px;
+    text-align: center;
     color: var(--green);
+    line-height: 130%;
 }
 
 .btn {
@@ -52,7 +40,7 @@ h1 {
     padding: 12px 28px;
     border: none;
     border-radius: 20px;
-    font-family: ComfortaaLight;
+    font-family: PressStart2P;
     font-size: 16px;
     color: var(--darkBlue);
     text-decoration: none;
@@ -65,11 +53,11 @@ h1 {
 }
 
 p {
-    font-family: ComfortaaLight;
+    font-family: PressStart2P;
     color: var(--lightGray);
 }
 
-/* ------------------------- FIRST SCREEN ------------------------------------------- */
+/* ------------------------- FIRST&LAST SCREEN ------------------------------------------- */
 body.home {
     background-image: url(../assets/images/background.png);
     background-size: cover;
@@ -86,14 +74,10 @@ body.home {
 }
 
 .container h1 {
-    margin-bottom: 30px;
+    margin: 0 20px 30px 20px;
 }
 
-.game .btn {
-    width: 34%;
-}
-
-/* ------------------------- SECOND & THIRD SCREENS ------------------------------------------- */
+/* ------------------------- SECOND SCREEN ------------------------------------------- */
 .game {
     display: grid;
     grid-template-rows: 0.2fr 1fr 0.1fr;
@@ -102,7 +86,7 @@ body.home {
 .game header, .game main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
@@ -111,13 +95,7 @@ body.home {
     padding-top: 50px;
 }
 
-.game .game-container section {
-    margin-bottom: 50px;
-}
-
-/* second screen */
-.game .game-container section.game-player-turn {
-    margin-bottom: 40px;
+.game .game-container section.game-player-turn p {
     font-size: 20px;
 }
 
@@ -132,7 +110,7 @@ body.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: ComfortaaLight;
+    font-family: PressStart2P;
     font-size: 64px;
     color: var(--green);
 }
@@ -149,53 +127,42 @@ div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-
     border-bottom: solid 1px var(--green);
 }
 
-/*third screen*/
-.game .game-container section.game-result p:first-child {
-    font-size: 36px;
-    margin: 0 14px 30px  14px;
-}
-
-.game .game-container section.game-result p:last-child {
-    font-family: PressStart2P;
-    font-size: 128px;
-    color: var(--green);
-}
-
 /* ------------------------- BREAKPOINTS ------------------------------------------- */
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    /*general*/
     h1 {
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .btn {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /*second screen*/
     .game .game-container section.game-player-turn p {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .game .game-container section.game-board div { 
-        width: 150px;
-        height: 150px;
-        font-size: 84px;
-    }
-
-    /*third screen*/
-    .game .game-container section.game-result p:first-child {
-        font-size: 56px;
-    }
-    
-    .game .game-container section.game-result p:last-child {
-        font-size: 148px;
+        width: 120px;
+        height: 120px;
+        font-size: 64px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .container h1 {
-        font-size: 120px;
+    /*general*/
+    h1 {
+        font-size: 70px;
     }
+
+    .container h1 {
+        font-size: 80px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }    
 }
