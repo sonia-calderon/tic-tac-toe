@@ -63,18 +63,19 @@ function cellClicked(e){
         gamePlayerTurnP.textContent = currentPlayer + "'s turn!";
 
         //game result
-        if(gameResult() !== false && gameResult() !== true){
+        if(gameResult() !== false){
             if(currentPlayer === 'X'){
                 currentPlayer = 'O'
             }else if(currentPlayer === 'O'){
                 currentPlayer = 'X'
             }
             window.location.href = './game-over.html?winner=' + currentPlayer;
+        }else{
+            let gameOver = gameArray.every(element => element !== null);
+            if(gameOver){
+                window.location.href = './game-over.html?winner=gameover';
+            }
         }
-        
-        if(gameResult() === true){
-            window.location.href = './game-over.html?winner=gameover';
-        }  
     }
 } //end of CellClicked function
 
@@ -88,11 +89,6 @@ function gameResult(){
             //return winning combo
             return [a, b, c];
         }
-        
-        if(gameArray.every(element => element !== null)){
-            //game over, no winners
-            return true;
-        }  
     }
     return false;
 } //end of gameResult function
